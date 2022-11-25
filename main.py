@@ -123,8 +123,8 @@ if __name__ == '__main__':
     resultados_totais = []
     ratings_pos_treino = []
     for M, K_A, K_B, K_C, K_D, Hi_A, Hi_B, Hi_C, Hi_D, dim in product([M], #np.array([*range(4, 5)]) / 10, # M
-                                                                      [2],#[2, 3, 4, 5], # K_A
-                                                                      [3],#[12, 15, 18], # K_B
+                                                                      [2, 3, 4, 5],#[2, 3, 4, 5], # K_A
+                                                                      [3, 4, 5, 6],#[12, 15, 18], # K_B
                                                                       [4],#[14, 15, 16], # K_C
                                                                       [5],#[19, 20, 21], # K_D
                                                                       [100],#[130, 150, 170], # Hi_A
