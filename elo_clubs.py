@@ -17,17 +17,17 @@ class elo_clubes:
             if type(Kn) == list:
                 pass
             else:
-                Kn = [Kn for i in range(max(divisoes_treino) + 1)]
+                Kn = [Kn for i in range(max(divisoes) + 1)]
             
             if type(Ki) == list:
                 pass
             else:
-                Ki = [Ki for i in range(max(divisoes_treino) + 1)]
+                Ki = [Ki for i in range(max(divisoes) + 1)]
             
             if type(Hi) == list:
                 pass
             else:
-                Hi = [Hi for i in range(max(divisoes_treino) + 1)]
+                Hi = [Hi for i in range(max(divisoes) + 1)]
                 
         self.n_clubes = np.max(jogos) + 1
         self.jogos_base = jogos
