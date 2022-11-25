@@ -117,7 +117,7 @@ if __name__ == '__main__':
             partidas_teste[linha, :] = [mandante, resultado_m, resultado_v, visitante]
             linha += 1
 
-    base_dimensoes = {3 : 865, 4 : 656, 5 : 445, 10 : 390}
+    base_dimensoes = {2 : 1078, 3 : 865, 4 : 656, 5 : 445, 10 : 390}
     params = []
     resultados = []
     resultados_totais = []
