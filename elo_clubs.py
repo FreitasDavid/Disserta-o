@@ -3,13 +3,9 @@ import os
 import json
 import numpy as np
 import pandas as pd
-import random as rd
 from glob import glob
 from copy import copy, deepcopy
-import matplotlib.pyplot as plt
 from itertools import product
-
-plt.rcParams['figure.figsize'] = [15, 10]
 
 '''
 Algoritmo ELO clubes
