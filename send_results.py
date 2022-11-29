@@ -2,6 +2,7 @@ from glob import glob
 
 import sys
 from mail_delivery import *
+from time import sleep
 
 if __name__ == '__main__':
     for arg in sys.argv:
@@ -16,9 +17,12 @@ if __name__ == '__main__':
     body = 'Seguem resultados.'
     attachments = glob('*.txt')
     enviado = False
-    while not enviado:
+    tentativas = 0
+    while not enviado or tentativas < 10:
         try:
             send(user, password, send_to, subject, body, attachments)
             enviado = True
+            tentativas += 1
+            sleep(5)
         except:
             pass
