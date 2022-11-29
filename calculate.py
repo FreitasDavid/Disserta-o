@@ -14,10 +14,10 @@ if __name__ == '__main__':
     # separando as partidas de treino
     jogos = []
     for ano in range(2013, 2022):
-        jogos.append(f'Serie_A-{ano}-games.json')
-        jogos.append(f'Serie_B-{ano}-games.json')
-        jogos.append(f'Serie_C-{ano}-games.json')
-        jogos.append(f'Serie_D-{ano}-games.json')
+        jogos.append(f'Arquivos/Serie_A-{ano}-games.json')
+        jogos.append(f'Arquivos/Serie_B-{ano}-games.json')
+        jogos.append(f'Arquivos/Serie_C-{ano}-games.json')
+        jogos.append(f'Arquivos/Serie_D-{ano}-games.json')
 
     n_jogos_treino = 0
     for jogo in jogos:
@@ -78,10 +78,10 @@ if __name__ == '__main__':
     # separando as partidas de teste
     jogos = []
     ano = 2022
-    jogos.append(f'Serie_A-{ano}-games.json')
-    jogos.append(f'Serie_B-{ano}-games.json')
-    jogos.append(f'Serie_C-{ano}-games.json')
-    jogos.append(f'Serie_D-{ano}-games.json')
+    jogos.append(f'Arquivos/Serie_A-{ano}-games.json')
+    jogos.append(f'Arquivos/Serie_B-{ano}-games.json')
+    jogos.append(f'Arquivos/Serie_C-{ano}-games.json')
+    jogos.append(f'Arquivos/Serie_D-{ano}-games.json')
 
     n_jogos_teste = 0
     for jogo in jogos:
@@ -123,14 +123,14 @@ if __name__ == '__main__':
     resultados_totais = []
     ratings_pos_treino = []
     for M, K_A, K_B, K_C, K_D, Hi_A, Hi_B, Hi_C, Hi_D, dim in product([M], #np.array([*range(4, 5)]) / 10, # M
-                                                                      [2, 5, 8, 10], # K_A
-                                                                      [9, 12, 15, 18], # K_B
-                                                                      [10, 13, 16, 20], # K_C
-                                                                      [13, 16, 19, 22], # K_D
-                                                                      [100, 150, 200, 250], # Hi_A
-                                                                      [150, 200, 250, 300], # Hi_B
-                                                                      [200, 250, 300, 350], # Hi_C
-                                                                      [200, 250, 300, 350], # Hi_D
+                                                                      [2],#[2, 5, 8, 10], # K_A
+                                                                      [9],#[9, 12, 15, 18], # K_B
+                                                                      [10],#[10, 13, 16, 20], # K_C
+                                                                      [13],#[13, 16, 19, 22], # K_D
+                                                                      [100],#[100, 150, 200, 250], # Hi_A
+                                                                      [150],#[150, 200, 250, 300], # Hi_B
+                                                                      [200],#[200, 250, 300, 350], # Hi_C
+                                                                      [200],#[200, 250, 300, 350], # Hi_D
                                                                       [dim]): # dim
 
         Kn = [K_A, K_B, K_C, K_D]
