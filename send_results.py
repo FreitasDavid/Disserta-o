@@ -15,7 +15,7 @@ if __name__ == '__main__':
 
     subject = '[Resultados - ELO Clubes]'
     body = 'Seguem resultados.'
-    attachments = glob('*.txt')
+    attachments = glob('results_*.txt')
     enviado = False
     tentativas = 0
     while not enviado or tentativas < 10:

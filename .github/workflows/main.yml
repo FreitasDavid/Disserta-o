@@ -36,6 +36,9 @@ jobs:
       - name: Execute models
         run: |
           python calculate.py M=${{ matrix.M }} dim=${{ matrix.dim }} > results_${{ matrix.M }}_${{ matrix.dim }}.txt
+      
+      - name: Send results
+        run: |
           python send_results.py -p=${{ secrets.PASSWORD }} -u=${{ secrets.USER }} -s=${{ secrets.USER }}
 
   Read:
