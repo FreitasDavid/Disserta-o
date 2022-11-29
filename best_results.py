@@ -34,7 +34,7 @@ if __name__ == '__main__':
             params.append(result)
             
     resultados = np.argsort(resultados)
-    print('Série A:')
+    print('Série B:')
     for i in range(1, top + 1):
         print(params[resultados[-i]])
         
@@ -52,7 +52,7 @@ if __name__ == '__main__':
             params.append(result)
             
     resultados = np.argsort(resultados)
-    print('Série A:')
+    print('Série C:')
     for i in range(1, top + 1):
         print(params[resultados[-i]])
         
@@ -70,6 +70,10 @@ if __name__ == '__main__':
             params.append(result)
             
     resultados = np.argsort(resultados)
-    print('Série A:')
+    print('Série D:')
     for i in range(1, top + 1):
         print(params[resultados[-i]])
+        
+    remove_files = glob('results_*.txt')
+    for file in remove_files:
+        os.remove(file)
