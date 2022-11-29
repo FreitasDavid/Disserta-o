@@ -15,4 +15,10 @@ if __name__ == '__main__':
     subject = '[Resultados - ELO Clubes]'
     body = 'Seguem resultados.'
     attachments = glob('*.txt')
-    send(user, password, send_to, subject, body, attachments)
+    enviado = False
+    while not enviado:
+        try:
+            send(user, password, send_to, subject, body, attachments)
+            enviado = True
+        except:
+            pass
