@@ -7,6 +7,7 @@ if __name__ == '__main__':
     M, dim = sys.argv[-2], sys.argv[-1]
     M = float(M.split('=')[-1])
     dim = int(dim.split('=')[-1])
+    div_considerada = sys.argv[-3].split('=')[-1]
 
     ranking = pd.read_excel('Ranking times brasileiros.xlsx')
     ranking['Clube'] = ranking['Clube'].apply(treat_club)
@@ -193,9 +194,9 @@ if __name__ == '__main__':
 
             # computa acertos
             if resultado_previsto == resultado_partida:
-                acertos += 1
+                acertos += divisoes_teste[i] == ord(div_considerada) - 65
 
-            total += 1
+            total += divisoes_teste[i] == ord(div_considerada) - 65
 
             # atualiza ranking
             Da = sA - sB

@@ -12,6 +12,7 @@ jobs:
       matrix:
         M: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]
         dim: [2, 3, 4, 5, 10]
+        div: ['A', 'B', 'C', 'D']
 
     steps:
       - name: Checkout repo content
@@ -35,7 +36,7 @@ jobs:
       
       - name: Execute models
         run: |
-          python calculate.py M=${{ matrix.M }} dim=${{ matrix.dim }} > results_${{ matrix.M }}_${{ matrix.dim }}.txt
+          python calculate.py div=${{ matrix.div }} M=${{ matrix.M }} dim=${{ matrix.dim }} > results_S${{ matrix.div }}_${{ matrix.M }}_${{ matrix.dim }}.txt
       
       - name: Send results
         run: |
