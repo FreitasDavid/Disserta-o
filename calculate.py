@@ -1,7 +1,9 @@
 from elo_clubs import *
 import sys
+import os
 
 if __name__ == '__main__':
+    os.chdir('Arquivos')
     M, dim = sys.argv[-2], sys.argv[-1]
     M = float(M.split('=')[-1])
     dim = int(dim.split('=')[-1])
@@ -14,10 +16,10 @@ if __name__ == '__main__':
     # separando as partidas de treino
     jogos = []
     for ano in range(2013, 2022):
-        jogos.append(f'Arquivos/Serie_A-{ano}-games.json')
-        jogos.append(f'Arquivos/Serie_B-{ano}-games.json')
-        jogos.append(f'Arquivos/Serie_C-{ano}-games.json')
-        jogos.append(f'Arquivos/Serie_D-{ano}-games.json')
+        jogos.append(f'Serie_A-{ano}-games.json')
+        jogos.append(f'Serie_B-{ano}-games.json')
+        jogos.append(f'Serie_C-{ano}-games.json')
+        jogos.append(f'Serie_D-{ano}-games.json')
 
     n_jogos_treino = 0
     for jogo in jogos:
@@ -78,10 +80,10 @@ if __name__ == '__main__':
     # separando as partidas de teste
     jogos = []
     ano = 2022
-    jogos.append(f'Arquivos/Serie_A-{ano}-games.json')
-    jogos.append(f'Arquivos/Serie_B-{ano}-games.json')
-    jogos.append(f'Arquivos/Serie_C-{ano}-games.json')
-    jogos.append(f'Arquivos/Serie_D-{ano}-games.json')
+    jogos.append(f'Serie_A-{ano}-games.json')
+    jogos.append(f'Serie_B-{ano}-games.json')
+    jogos.append(f'Serie_C-{ano}-games.json')
+    jogos.append(f'Serie_D-{ano}-games.json')
 
     n_jogos_teste = 0
     for jogo in jogos:
@@ -218,4 +220,5 @@ if __name__ == '__main__':
         resultados.append(resultado)
         resultados_totais.append([acertos, total])
 
+        os.chdir('..')
         print(resultado, [acertos, total], [M, Kn.copy(), Hi.copy(), dim])
