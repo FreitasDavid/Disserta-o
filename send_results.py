@@ -15,4 +15,4 @@ if __name__ == '__main__':
     subject = '[Resultados - ELO Clubes]'
     body = 'Seguem resultados.'
     attachments = glob('*.txt')
-    send_mail(user, password, send_to, subject, body, attachments)
+    send(user, password, send_to, subject, body, attachments)
