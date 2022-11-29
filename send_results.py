@@ -22,7 +22,6 @@ if __name__ == '__main__':
         try:
             send(user, password, send_to, subject, body, attachments)
             enviado = True
+        except:
             tentativas += 1
             sleep(5)
-        except:
-            pass
